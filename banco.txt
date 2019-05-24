@@ -1,0 +1,32 @@
+drop database banco_pi;
+create database banco_pi;
+use banco_pi;
+
+create table cliente(
+id int not null primary key auto_increment,
+razao_social varchar (50),
+nome_fantasia varchar (50),
+email varchar (50),
+cnpj varchar (50),
+endereco varchar (200),
+pais varchar (50),
+estado varchar (50)
+);
+
+create table login (
+id int not null primary key auto_increment,
+id_usuario int not null,
+usuario varchar (50),
+senha varchar (50),
+CONSTRAINT `fk_cliente` FOREIGN KEY (id_usuario) REFERENCES cliente (id)
+);
+
+create table preco (
+id int not null primary key auto_increment,
+id_posto int not null,
+gasolina double,
+gasolina_aditivada double,
+etanol double,
+diesel double,
+CONSTRAINT `fk_posto` FOREIGN KEY (id_posto) REFERENCES cliente (id)
+)
