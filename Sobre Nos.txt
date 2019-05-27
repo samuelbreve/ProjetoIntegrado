@@ -1,3 +1,6 @@
 Lucas Varsone - 18000741: Apresentação e Design 
 (Foto) redes sociais...
 Caio Andrade - 18001508: Trello Manager
+
+Continuação Pull Request
+Samuel Breve - 18001402: BackEnd
